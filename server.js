@@ -1,5 +1,5 @@
 import express from "express";
-// import users from "./routes/users.js"
+import users from "./routes/Users.js"
 
 
 const app = express();
@@ -25,7 +25,7 @@ app.get("/", async (req, res) => {
 
 
 
-// app.use("/users", users);
+app.use("/users", users);
 
 
  

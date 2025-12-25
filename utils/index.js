@@ -41,7 +41,7 @@ export  async function readUsers() {
  }
 
 
-export  async function  writeUsers(data) { 
+export async function  writeUsers(data) { 
     return await writeToFile('data/users.json',data)
 }
 
@@ -56,17 +56,13 @@ export  async function  writeEvents(data) {
 }
 
 
-export  async function  writeUsers(data) { 
-    return await writeToFile('data/users.json',data)
-}
-
 
 export  async function readReceipts() { 
     return await readFromFile('data/receipts.json')
  }
 
 
-export  async function  writeEvents(data) { 
+export  async function  writeReceipts(data) { 
     return await writeToFile('data/receipts.json',data)
 }
 
