@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 // ================== ROUTES ===================
 app.get("/", async (req, res) => {
   res.json({
-    message: "Welcome to Simple Auth API",
+    message: "Welcome to Event Ticket Server API",
     version: "1.0.0",
   });
 });
