@@ -1,6 +1,6 @@
 import express from "express";
 import users from "./routes/Users.js"
-
+import creator from "./routes/Event.js"
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -26,6 +26,8 @@ app.get("/", async (req, res) => {
 
 
 app.use("/users", users);
+app.use("/creator", creator);
+
 
 
  

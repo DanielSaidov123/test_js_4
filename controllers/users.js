@@ -1,4 +1,4 @@
-import { readUsers, validateUser, writeUsers } from "../utils/index.js";
+import { readUsers, writeUsers } from "../utils/index.js";
 
 export const CreateUser = async (req, res) => {
   try {
@@ -8,10 +8,10 @@ export const CreateUser = async (req, res) => {
 
     const userslist = await readUsers();
 
-    const user =  userslist.find((u)=>u.username===req.body.username)
-    if(user){
-        return res.status(401).send({ err: "There is already such a user. " });
-     };
+    const user = userslist.find((u) => u.username === req.body.username);
+    if (user) {
+      return res.status(401).send({ err: "There is already such a user. " });
+    }
     const newuser = {
       username: req.body.username,
       password: req.body.password,
