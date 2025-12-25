@@ -14,7 +14,10 @@ export const CreateEvent = async (req, res) => {
         .send({ err: "username or password is not good. try again" });
     }
     const eventlist = await readEvents();
-
+    const event = eventlist.find((e)=>e.eventName === req.body.eventName);
+    if (event) {
+      return res.status(401).send({ err: "There is already such an event." });
+    }
     const newevent = {
       eventName: req.body.eventName,
       ticketsForSale: req.body.ticketsForSale,
