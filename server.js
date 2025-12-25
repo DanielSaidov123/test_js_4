@@ -1,6 +1,6 @@
 import express from "express";
-import users from "./routes/Users.js"
-import creator from "./routes/Event.js"
+import users from "./routes/users.js"
+import creator from "./routes/event.js"
 
 const app = express();
 const PORT = process.env.PORT || 8000;
