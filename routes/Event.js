@@ -1,10 +1,10 @@
 import express from "express";
+import { CreateEvent } from "../controllers/Event.js";
 
 const router = express.Router();
 
-// router.route('/register').post(CreateUser)
+router.route('/events').post(CreateEvent)
  
-
 
 
 
